@@ -1,0 +1,125 @@
+.info {
+  background-color: #E2E8F9;
+  top: 0px;
+  width: 90%;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info .swiper_001 {
+  background-color: #E2E8F9;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 65px;
+  margin-left: 5%;
+  width: 100%;
+}
+
+.left01 {
+  display: flex;
+  align-items: center;
+}
+
+.updownWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.subtext01 {
+  margin-left: 10px;
+  font-size: 60px;
+  font-family: 'NotoSerif';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.down {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+
+.right01 {
+  z-index: -1;
+  margin-left: -20px;
+  animation: zoomInOut 1.8s ease-in-out infinite;
+}
+
+.info .swiper_002 {
+  background-color: #E2E8F9;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-left: -10%;
+  width: 100%;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.info .swiper_002 .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20%;
+  padding-right: 5%;
+  animation: zoomInOut 1.8s ease-in-out infinite;
+}
+
+.info .swiper_002 .rightside {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.info .swiper_002 .rightside .one {
+  display: flex;
+  flex-direction: row;
+}
+
+@font-face {
+  font-family: 'NotoSerif';
+  src: url('../font/NotoSerif-Bold.ttf');
+}
+
+.info .swiper_002 .rightside .one .subtext {
+  width: 130px;
+  font-size: 60px;
+  font-family: 'NotoSerif';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.info .swiper_002 .rightside .two {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}

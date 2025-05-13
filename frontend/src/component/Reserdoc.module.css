@@ -1,0 +1,57 @@
+.bg {
+  position: relative;
+  width: 60%;
+  height: 600px;
+  padding-top: 60px;
+  margin: 0 auto;
+  background-color: #F8FBFB;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg .hosname {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.doctor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.doctor button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.doctor button img {
+  width: 150px;
+  /* height: 150px;
+  border-radius: 50%; */
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.doctor button:hover img {
+  transform: scale(1.1);
+}
+
+.doctorInfo {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.doctorInfo h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.doctorInfo p {
+  margin-top: 10px;
+  font-size: 14px;
+}

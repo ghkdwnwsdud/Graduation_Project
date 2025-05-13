@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:5.7
+    platform: linux/amd64 # 로컬 환경에서만
+    environment:
+      MYSQL_DATABASE: HeyDoctor
+      MYSQL_USER: heydoctor
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3307:3306"
+    networks:
+      - app-tier
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./backend/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./backend/my.cnf:/etc/mysql/my.cnf
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p password"]
+      timeout: 5s
+      retries: 10
+
+  backend: 
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    depends_on:
+      - db
+    networks:
+      - app-tier
+
+networks:
+  app-tier:
+    driver: bridge
+
+volumes:
+  mysql-data:
